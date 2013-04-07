@@ -1,0 +1,21 @@
+{
+  "name": "zonefile",
+  "version": "0.0.1",
+  "description": "parser for dns zone files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": "",
+  "keywords": [
+    "dns",
+    "zone",
+    "file"
+  ],
+  "author": "christoph peter",
+  "license": "MIT",
+  "devDependencies": {
+    "should": "~1.2.2",
+    "mocha": "~1.9.0"
+  }
+}

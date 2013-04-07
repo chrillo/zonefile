@@ -1,0 +1,18 @@
+$TTL 86400
+@   IN SOA ns.domain.com. postmaster.robot.domain.com. (
+    2013033100   ; serial
+    14400        ; refresh
+    1800         ; retry
+    604800       ; expire
+    86400 )      ; minimum
+ 
+@                        IN NS      ns.domain.com.
+@                        IN NS      ns2.domain.com.
+@                        IN NS      ns3.domain.com.
+ 
+@                        IN A       127.0.0.1
+www                      IN A       127.0.0.1
+cloud                    IN CNAME   test.domain.com.
+files                    IN CNAME   www
+@                        IN MX 10   www
+@                        IN TXT     somevalue
