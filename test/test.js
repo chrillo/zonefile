@@ -13,6 +13,7 @@ describe('Zonefile',function(){
 			var zone = zonefile.parseZone(data)
 				zone.ttl.should.equal(86400)
 				zone.records.length.should.equal(9)
+				console.log(zone)
 				done()
 		})
 	})
