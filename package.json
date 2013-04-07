@@ -6,7 +6,10 @@
   "scripts": {
     "test": "mocha -R spec"
   },
-  "repository": "https://github.com/chrillo/zonefile.git",
+  "repository": {
+        "type": "git",
+        "url": "git://github.com/chrillo/zonefile.git"
+  },
   "keywords": [
     "dns",
     "zone",
