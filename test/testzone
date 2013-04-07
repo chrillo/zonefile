@@ -9,7 +9,7 @@ $TTL 86400
 @                        IN NS      ns.domain.com.
 @                        IN NS      ns2.domain.com.
 @                        IN NS      ns3.domain.com.
- 
+
 @                        IN A       127.0.0.1
 www                      IN A       127.0.0.1
 cloud                    IN CNAME   test.domain.com.
