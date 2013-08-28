@@ -1,6 +1,6 @@
 {
   "name": "zonefile",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "parser for dns zone files",
   "main": "index.js",
   "scripts": {
