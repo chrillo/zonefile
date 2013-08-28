@@ -17,7 +17,7 @@ describe('Zonefile',function(){
 				done()
 		})
 	})
-	
+
 	describe('method parse ttl',function(){
 		it('should extract the ttl value if it exits',function(done){
 				var line = '$TTL 86400'
@@ -29,12 +29,12 @@ describe('Zonefile',function(){
 	describe('method pares line',function(){
 		it('should extract A recods',function(done){
 			var line = 'test      3600           IN A       127.0.0.1'
-			var record = zonefile.parseLine(line)		
-			console.log(record)
+			var record = zonefile.parseLine(line)
 			should.exist(record.ttl)
+			record.ttl.should.equal(3600)
 			record.name.should.equal('test')
 			record.type.should.equal('A')
-			record.data.should.equal('127.0.0.1')
+			record.value.should.equal('127.0.0.1')
 			done()
 		})
 		it('should extract MX records with priorities',function(done){
@@ -42,11 +42,11 @@ describe('Zonefile',function(){
 			var record = zonefile.parseLine(line)
 			record.name.should.equal('@')
 			record.type.should.equal('MX')
-			record.data.should.equal('www')
+			record.value.should.equal('www')
 			record.priority.should.equal(10)
 			done()
 		})
-		
+
 	})
 
 })
