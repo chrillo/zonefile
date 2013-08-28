@@ -42,6 +42,7 @@ describe('Zonefile',function(){
 			var record = zonefile.parseLine(line)
 			record.name.should.equal('@')
 			record.type.should.equal('MX')
+			should.not.exists(record.ttl)
 			record.value.should.equal('www')
 			record.priority.should.equal(10)
 			done()
