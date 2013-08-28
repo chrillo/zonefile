@@ -28,15 +28,17 @@ describe('Zonefile',function(){
 	})
 	describe('method pares line',function(){
 		it('should extract A recods',function(done){
-			var line = 'test                   IN A       127.0.0.1'
+			var line = 'test      3600           IN A       127.0.0.1'
 			var record = zonefile.parseLine(line)		
+			console.log(record)
+			should.exist(record.ttl)
 			record.name.should.equal('test')
 			record.type.should.equal('A')
 			record.data.should.equal('127.0.0.1')
 			done()
 		})
 		it('should extract MX records with priorities',function(done){
-			var line = '@                        IN MX 10   www'
+			var line = '@                       IN MX 10   www'
 			var record = zonefile.parseLine(line)
 			record.name.should.equal('@')
 			record.type.should.equal('MX')
